@@ -13,8 +13,9 @@ module Text.VCard
     ) where
 
 import Data.List (intercalate)
-import Data.Time (UTCTime, TimeZone, FormatTime, formatTime)
-import System.Locale (defaultTimeLocale)
+import Data.Time.Clock (UTCTime)
+import Data.Time.LocalTime (TimeZone)
+import Data.Time.Format (formatTime, FormatTime, defaultTimeLocale)
 
 -- | Calling @show@ on @VCard@ will output a RFC 2426-compliant VCard that
 -- can, for example, be easily saved to a file and imported by any supporting
